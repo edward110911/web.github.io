@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalabe=no" >
+    <link href="img/logo1.png" rel="icon">
+    <title>Information - TDOBP</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<link href="https://www.tdobp.eu.org/page/css/footer-basic-centered.css" rel="stylesheet">
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b92e994837.js" crossorigin="anonymous"></script>
+<style>
+.left{
+  float: left;
+  width: 50%;
+  height: 500px;
+  background-color: lightblue;
+}
+.right{
+  float: right;
+  width: 50%;
+  height: 500px;
+  background-color: lightcoral;
+}
+</style>
+<script>
+  function time(){
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var day = date.getDate();
+    var week = date.getDay();
+    week="星期"+"日一二三四五六".charAt(week);
+    /*switch(week){
+      case 1:
+        week="星期一";
+        break;
+      case 2:
+        week="星期二";
+        break;
+      case 3:
+        week="星期三";
+        break;
+      case 4:
+        week="星期四";
+        break;
+      case 5:
+        week="星期五";
+        break;
+      case 6:
+        week="星期六";
+        break;
+      case 0:
+        week="星期日";
+        break;
+    }*/
+    var hour =date.getHours();
+    hour=hour<10?"0"+hour:hour;
+    var minute =date.getMinutes();
+    minute=minute<10?"0"+minute:minute;
+    var second = date.getSeconds();
+    second=second<10?"0"+second:second;
+    var currentTime = year+"-"+month+"-"+day+"  "+week+"   "+hour+":"+minute+":"+second;
+    document.getElementById("time").innerHTML=currentTime;
+  }
+  setInterval("time()",1000);
+</script>
+</head>
+<body style="overflow-x:hidden">
+<br>
+
+<div class="well" align="center">
+  <h3><i class="fa-solid fa-users"> 购物网站 </i></h3>
+</div>
+</hr>
+
+<div class="col-sm-3 col-md-2">
+  <div class="thumbnail">
+      <img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Lazada_%282019%29.svg/2560px-Lazada_%282019%29.svg.png"  height="200" width="200"
+      alt="通用的占位符缩略图">
+  </div>
+  <div class="caption" align="center">
+    <h3>Lazada - 来赞达</h3>
+    <p>
+        <a href="https://www.lazada.com/en/" class="btn btn-primary" role="button">
+            官网
+        </a> 
+    </p>
+</div>
+</div>
+
+<div class="col-sm-3 col-md-2">
+  <div class="thumbnail">
+      <img decoding="async" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/ca5d12864c12916c05640b36e47ac5c9.png"  height="100" width="100"
+      alt="通用的占位符缩略图">
+  </div>
+  <div class="caption" align="center">
+    <h3>Shopee - 虾皮购物</h3>
+    <p>
+        <a href="https://shopee.com.my/" class="btn btn-primary" role="button">
+            官网
+        </a> 
+    </p>
+</div>
+</div>
+
+<div class="col-sm-3 col-md-2">
+  <div class="thumbnail">
+      <img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Taobao_Logo.svg/2560px-Taobao_Logo.svg.png"  height="130" width="130"
+      alt="通用的占位符缩略图">
+  </div>
+  <div class="caption" align="center">
+    <h3>Taobao - 淘宝</h3>
+    <p>
+        <a href="https://world.taobao.com/" class="btn btn-primary" role="button">
+            官网
+        </a> 
+    </p>
+</div>
+</div>
+
+<div class="col-sm-3 col-md-2">
+  <div class="thumbnail">
+      <img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"  height="180" width="180"
+      alt="通用的占位符缩略图">
+  </div>
+  <div class="caption" align="center">
+    <h3>Amazon - 亚马逊</h3>
+    <p>
+        <a href="https://www.amazon.com/" class="btn btn-primary" role="button">
+            官网
+        </a> 
+    </p>
+</div>
+</div>
+
+<div class="col-sm-3 col-md-2">
+  <div class="thumbnail">
+      <img decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTstG_p9y9N3xjB7CYVSRcjLwf2umJ7mD3dPg&usqp=CAU"  height="110" width="110"
+      alt="通用的占位符缩略图">
+  </div>
+  <div class="caption" align="center">
+    <h3>Tmall - 天猫</h3>
+    <p>
+        <a href="https://www.tmall.com/" class="btn btn-primary" role="button">
+            官网
+        </a> 
+    </p>
+</div>
+</div>
+
+<div class="col-sm-3 col-md-2">
+  <div class="thumbnail">
+      <img decoding="async" src="https://img.sj33.cn/uploads/202008/22112T5Q-1.png"  height="110" width="110"
+      alt="通用的占位符缩略图">
+  </div>
+  <div class="caption" align="center">
+    <h3>JD - 京东</h3>
+    <p>
+        <a href="https://global.jd.com/" class="btn btn-primary" role="button">
+            官网
+        </a> 
+    </p>
+</div>
+</div>
+
+<div class="row">
+ 
+</div>
+<br>
+
+<div class="well" align="center">
+  Copyrighted 2022 © tdobp.eu.org<br>
+<a href="https://www.instagram.com/tdobp_0805"><i class="fa-brands fa-instagram fa-xl" style="color: #ee00ff;"></i></a>   ｜ 
+<a href="https://www.facebook.com/tdobp"><i class="fa-brands fa-facebook fa-xl" style="color: #002aff;"></i></a>   ｜ 
+  <a href="https://www.linktr.ee/tdobp"><img src="img/logo1.png" width="20" height="20" alt=""></a>
+</div>
+
+<br></br><br>
+
+<!--背景图片-->
+<div id="bg" style="background-image: url(img/bg4.jpg);"></div>
+
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+	<div class="container-fluid"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-star"></i> TDOBP </a>
+		
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse" align="center">
+        <ul class="nav navbar-nav">
+          <li><a href="https://www.tdobp.eu.org/">  <i class="fa-solid fa-house"></i> Home </a></li>
+          <li class="active"><a href="#"><i class="fa-regular fa-newspaper"></i> Information </a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa-solid fa-folder-open"></i> Folder
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" align="center">
+                <li><a href="#"><i class="fa-solid fa-circle-exclamation"></i> Help </a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa-regular fa-address-card"></i> About Us</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa-brands fa-discord"></i> Discord</a></li>
+              </ul>
+            </li>
+        </ul>
+
+		<ul class="nav navbar-nav navbar-right"> 
+            <li><a href="#"><i class="fa-regular fa-clock"></i> <span id="time"></span></a> </li> 
+        </ul>
+    </div>
+	</div>
+</nav>
+
+<style>
+    #bg{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  min-width: 1000px;
+  z-index:-10;
+  zoom: 1;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+
+.d1 a{
+color: inherit;
+text-decoration: none;
+
+}
+a:link {
+      text-decoration: none;
+}
+
+a:visited {
+      text-decoration: none;
+}
+
+a:hover {
+      text-decoration: none;
+}
+
+a:active {
+      text-decoration: none;
+}
+</style>
+</body>
+</html>
