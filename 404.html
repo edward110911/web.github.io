@@ -35,13 +35,13 @@
     </div>
 
     <div class="col-md-4 form-group">
-      <span><img src="https://www.tdobp.eu.org/img/p1.png" width="100%" height=""/></span>
+      <span><img src="https://www.tdobp.eu.org/p1.png" width="100%" height=""/></span>
 </div>
   <div class="col-md-4 form-group">
-      <span><img src="https://www.tdobp.eu.org/img/p2.png" width="100%" height=""/></span>
+      <span><img src="https://www.tdobp.eu.org/p2.png" width="100%" height=""/></span>
   </div>
   <div class="col-md-4 form-group">
-      <span><img src="https://www.tdobp.eu.org/img/p3.png" width="100%" height=""/></span>
+      <span><img src="https://www.tdobp.eu.org/p3.png" width="100%" height=""/></span>
   </div>
 </div> 
 
@@ -103,6 +103,69 @@ color: inherit;
 text-decoration: none;
 
 }
+
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(3, 81, 250, 0.3);
+}
+
+#popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#popup p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#close-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #0743e9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 </style>
+<!-- 弹窗代码开始 -->
+<div id="popup-container">
+	<div id="popup">
+	  <h2><i class="fa-solid fa-gear"></i> 维护公告 </h2>
+	  <p>经过官方审核后，决定将对本站进行停运维护并对网页内容进行优化，届时本站将无法访问，在此我们先向您致歉！———— TDOBP官方</p>
+	  <button id="close-btn">关闭</button>
+	</div>
+  </div>
+  <script>// 在页面加载时显示弹窗公告
+	window.onload = function() {
+	  document.getElementById('popup-container').style.display = 'block';
+	}
+	
+	// 关闭弹窗公告
+	document.getElementById('close-btn').addEventListener('click', function() {
+	  document.getElementById('popup-container').style.display = 'none';
+	});</script>
 </body>
 </html>

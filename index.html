@@ -241,18 +241,69 @@ a:active {
   -o-background-size: cover;
   background-position: center 0;
 }
+
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+#popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#popup p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#close-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #001aff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 </style>
 <!-- 弹窗代码开始 -->
-<div class="web_notice" 
-style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.3);z-index: 99999;">
-	<div style="position: fixed;top: 50%;left: 50%;width: 550px;background: #FFF;transform: translate(-50%, -50%);border-radius: 40px;padding: 50px 40px;">
-	<h3 style="font-weight: bold;text-align: center;font-size: 30px;"> <i class="fa-solid fa-gear">维护公告</i> </h3>
-	<div style="font-size: 16px;margin-top: 26px;line-height: 30px;color: #999;">
-		致：全体用户<br>
-		&#12288 经官方考察及体验，决定对本站将进行停运维护及升级网页内容，届时本站将无法进入。在此，我们向您致歉！
-		————TDOBP官方
+<div id="popup-container">
+	<div id="popup">
+	  <h2><i class="fa-solid fa-gear"></i> 维护公告 </h2>
+	  <p>经过官方审核后，决定将对本站进行停运维护并对网页内容进行优化，届时本站将无法访问，在此我们先向您致歉！———— TDOBP官方</p>
+	  <button id="close-btn">关闭</button>
 	</div>
-		<a style="display: block;background: #98a3ff;color: #FFF;text-align: center;font-weight: bold;font-size: 19px;line-height: 60px;margin: 0 auto;margin-top: 45px;border-radius: 32px;width: 80%;" onclick="javascript:document.querySelector('.web_notice').remove()"> 我知道了 </i></a></div></div>
-	<!-- 弹窗代码结束 -->
+  </div>
+  <script>// 在页面加载时显示弹窗公告
+	window.onload = function() {
+	  document.getElementById('popup-container').style.display = 'block';
+	}
+	
+	// 关闭弹窗公告
+	document.getElementById('close-btn').addEventListener('click', function() {
+	  document.getElementById('popup-container').style.display = 'none';
+	});</script>
 </body>
 </html>
